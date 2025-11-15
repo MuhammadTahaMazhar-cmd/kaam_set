@@ -21,7 +21,7 @@
       width: 100%;
       background-color: #082567;
       /* Dark navy blue */
-      /*
+    /*
       color: white;
       display: flex;
       justify-content: space-between;
@@ -60,280 +60,288 @@
 */
 
 
-/* --- HEADER --- */
-header {
-  width: 100%;
-  background-color: #082567; /* Dark navy blue */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  position: relative;
-  z-index: 10;
-}
+    /* --- HEADER --- */
+    header {
+      width: 100%;
+      background-color: #082567;
+      /* Dark navy blue */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      position: relative;
+      z-index: 10;
+    }
 
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 22px;
-}
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 22px;
+    }
 
-.logo img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-
-/* --- NAV LINKS --- */
-#navbar {
-  display: flex;
-  gap: 25px;
-}
-
-#navbar a {
-  color: white; /* ✅ White text */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-#navbar a:hover {
-  color: #00d4ff; /* Light blue hover */
-}
-
-/* --- MENU BUTTON --- */
-.menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: white; /* ✅ White icon */
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  /* Show the menu icon */
-  .menu-btn {
-    display: block;
-  }
-
-  /* Hide the navbar initially */
-  #navbar {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #082567;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #00d4ff;
-  }
-
-  /* When active class added by JS */
-  #navbar.active {
-    display: flex;
-  }
-
-  /* Adjust link style in mobile menu */
-  #navbar a {
-    padding: 10px 0;
-    font-size: 18px;
-  }
-}
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
 
 
+    /* --- NAV LINKS --- */
+    #navbar {
+      display: flex;
+      gap: 25px;
+    }
 
-/* --- HERO SECTION --- */
-section.hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  background:  #10368f; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 80px;
-  color: rgb(218, 218, 231);
-}
+    #navbar a {
+      color: white;
+      /* ✅ White text */
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-/* Background overlay + animation effect */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
-  z-index: 1;
-}
+    #navbar a:hover {
+      color: #00d4ff;
+      /* Light blue hover */
+    }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
+    /* --- MENU BUTTON --- */
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      /* ✅ White icon */
+      font-size: 30px;
+      cursor: pointer;
+    }
 
-/* Hero Content Container */
-.container {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
 
-/* --- Text Content --- */
-.text-content {
-  flex: 1;
-  max-width: 520px;
-}
+      /* Show the menu icon */
+      .menu-btn {
+        display: block;
+      }
 
-.text-content h1 {
-  font-size: 50px;
-  font-weight: 900;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
+      /* Hide the navbar initially */
+      #navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #082567;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #00d4ff;
+      }
 
-.text-content p {
-  font-size: 18px;
-  color: #fdfdfd;
-  line-height: 1.5;
-}
+      /* When active class added by JS */
+      #navbar.active {
+        display: flex;
+      }
 
-/* --- Phone Image --- */
-.phones {
-  flex: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-}
+      /* Adjust link style in mobile menu */
+      #navbar a {
+        padding: 10px 0;
+        font-size: 18px;
+      }
+    }
 
-.phones img.front {
-  width: 480px;
-  position: relative;
-  z-index: 2;
-  transform: rotate(3deg);
-  animation: float 3s ease-in-out infinite;
-}
 
-/* Floating Animation */
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(3deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(3deg);
-  }
-  100% {
-    transform: translateY(0) rotate(3deg);
-  }
-}
 
-/* ============================= */
-/* RESPONSIVE STYLES */
-/* ============================= */
+    /* --- HERO SECTION --- */
+    section.hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      background: #10368f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 80px;
+      color: rgb(218, 218, 231);
+    }
 
-/* Laptop (max 1200px) */
-@media (max-width: 1200px) {
-  .text-content h1 {
-    font-size: 44px;
-  }
-  .phones img.front {
-    width: 420px;
-  }
-}
+    /* Background overlay + animation effect */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
+      z-index: 1;
+    }
 
-/* Tablets (max 992px) */
-@media (max-width: 992px) {
-  section.hero {
-    padding: 80px 50px;
-    min-height: auto;
-  }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
 
-  .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 60px;
-  }
+    /* Hero Content Container */
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-  .phones {
-    order: 2;
-  }
+    /* --- Text Content --- */
+    .text-content {
+      flex: 1;
+      max-width: 520px;
+    }
 
-  .text-content {
-    order: 1;
-    max-width: 100%;
-  }
+    .text-content h1 {
+      font-size: 50px;
+      font-weight: 900;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
 
-  .phones img.front {
-    width: 360px;
-    transform: rotate(0deg);
-    animation: float 3s ease-in-out infinite;
-  }
+    .text-content p {
+      font-size: 18px;
+      color: #fdfdfd;
+      line-height: 1.5;
+    }
 
-  .text-content h1 {
-    font-size: 40px;
-  }
+    /* --- Phone Image --- */
+    .phones {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
 
-  .text-content p {
-    font-size: 17px;
-  }
-}
+    .phones img.front {
+      width: 480px;
+      position: relative;
+      z-index: 2;
+      transform: rotate(3deg);
+      animation: float 3s ease-in-out infinite;
+    }
 
-/* Mobiles (max 768px) */
-@media (max-width: 768px) {
-  section.hero {
-    padding: 70px 30px;
-  }
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(3deg);
+      }
 
-  .text-content h1 {
-    font-size: 32px;
-  }
+      50% {
+        transform: translateY(-15px) rotate(3deg);
+      }
 
-  .text-content p {
-    font-size: 16px;
-  }
+      100% {
+        transform: translateY(0) rotate(3deg);
+      }
+    }
 
-  .phones img.front {
-    width: 280px;
-  }
-}
+    /* ============================= */
+    /* RESPONSIVE STYLES */
+    /* ============================= */
 
-/* Extra Small (max 480px) */
-@media (max-width: 480px) {
-  section.hero {
-    padding: 60px 20px;
-  }
+    /* Laptop (max 1200px) */
+    @media (max-width: 1200px) {
+      .text-content h1 {
+        font-size: 44px;
+      }
 
-  .text-content h1 {
-    font-size: 26px;
-    line-height: 1.3;
-  }
+      .phones img.front {
+        width: 420px;
+      }
+    }
 
-  .text-content p {
-    font-size: 15px;
-  }
+    /* Tablets (max 992px) */
+    @media (max-width: 992px) {
+      section.hero {
+        padding: 80px 50px;
+        min-height: auto;
+      }
 
-  .phones img.front {
-    width: 220px;
-  }
-}
+      .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+      }
 
- 
+      .phones {
+        order: 2;
+      }
+
+      .text-content {
+        order: 1;
+        max-width: 100%;
+      }
+
+      .phones img.front {
+        width: 360px;
+        transform: rotate(0deg);
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .text-content h1 {
+        font-size: 40px;
+      }
+
+      .text-content p {
+        font-size: 17px;
+      }
+    }
+
+    /* Mobiles (max 768px) */
+    @media (max-width: 768px) {
+      section.hero {
+        padding: 70px 30px;
+      }
+
+      .text-content h1 {
+        font-size: 32px;
+      }
+
+      .text-content p {
+        font-size: 16px;
+      }
+
+      .phones img.front {
+        width: 280px;
+      }
+    }
+
+    /* Extra Small (max 480px) */
+    @media (max-width: 480px) {
+      section.hero {
+        padding: 60px 20px;
+      }
+
+      .text-content h1 {
+        font-size: 26px;
+        line-height: 1.3;
+      }
+
+      .text-content p {
+        font-size: 15px;
+      }
+
+      .phones img.front {
+        width: 220px;
+      }
+    }
+
+
 
 
 
@@ -363,498 +371,510 @@ canvas {
     .whatsapp-button img {
       width: 700px;
       height: 35px;
-    } */ 
+    } */
 
 
 
-.about-section {
-  background: linear-gradient(135deg, #001f3f, #007bff);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+    .about-section {
+      background: linear-gradient(135deg, #001f3f, #007bff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* Subtle glowing dots effect */
-.about-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(white 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.1;
-  animation: glowmove 10s linear infinite;
-}
-/* Floating Animation */
+    /* Subtle glowing dots effect */
+    .about-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.1;
+      animation: glowmove 10s linear infinite;
+    }
 
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(3deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(3deg);
-  }
-  100% {
-    transform: translateY(0) rotate(3deg);
-  }
-}
-  from { background-position: 0 0; }
-  to { background-position: 100px 100px; }
+    /* Floating Animation */
 
-.about-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(3deg);
+      }
 
-.expertise {
-  color: #66b2ff;
-  letter-spacing: 1px;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
+      50% {
+        transform: translateY(-15px) rotate(3deg);
+      }
 
-.about-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
+      100% {
+        transform: translateY(0) rotate(3deg);
+      }
+    }
 
-.about-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-}
+    from {
+      background-position: 0 0;
+    }
 
-.about-icon img {
-  width: 80px;
-  filter: drop-shadow(0 0 5px white);
-}
+    to {
+      background-position: 100px 100px;
+    }
 
-.about-text h3 {
-  color: #fff;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
+    .about-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-.about-text p {
-  color: #d9e9ff;
-  line-height: 1.8;
-  font-size: 16px;
-  text-align: left;
-}
+    .expertise {
+      color: #66b2ff;
+      letter-spacing: 1px;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
-.benefits-section {
-  position: relative;
-  padding: 60px 20px;
-   background: linear-gradient(135deg, #001f3f, #007bff);
-  color: white;
-  overflow: hidden;
-}
+    .about-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
 
+    .about-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
 
-.benefit-btn {
-  background: radial-gradient(circle at top left, #002f6c, #005c97, #021b79);
-  color: white;
-  padding: 100px 40px;
-  position: relative;
-  overflow: hidden;
-}
+    .about-icon img {
+      width: 80px;
+      filter: drop-shadow(0 0 5px white);
+    }
 
-.benefits-section::before {
+    .about-text h3 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
 
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-  opacity: 0.08;
-  z-index: 0;
-}
+    .about-text p {
+      color: #d9e9ff;
+      line-height: 1.8;
+      font-size: 16px;
+      text-align: left;
+    }
 
-.benefits-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 39px;
-  font-weight: 700;
-  margin-bottom: 60px;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.benefit-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
-  padding: 40px 25px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.benefit-icon img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-  filter: brightness(1.2);
-}
-
-.benefit-card h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #ffcc00;
-}
-
-.benefit-card p {
-  font-size: 15px;
-  color: #e0e0e0;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.benefit-btn {
-  background: linear-gradient(90deg, #007bff, #00d4ff);
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.benefit-btn:hover {
-  background: linear-gradient(90deg, #00d4ff, #007bff);
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00d4ff;
-}
-
-.benefits-footer {
-  text-align: center;
-  margin-top: 80px;
-  color: #e0e0e0;
-}
-
-.benefits-footer h3 {
-  font-size: 26px;
-  color: #ffcc00;
-  margin-bottom: 15px;
-}
-
-.benefits-footer p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
+    .benefits-section {
+      position: relative;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #001f3f, #007bff);
+      color: white;
+      overflow: hidden;
+    }
 
 
+    .benefit-btn {
+      background: radial-gradient(circle at top left, #002f6c, #005c97, #021b79);
+      color: white;
+      padding: 100px 40px;
+      position: relative;
+      overflow: hidden;
+    }
 
+    .benefits-section::before {
 
-/* General Section */
-.workers-section {
-  background: linear-gradient(180deg, #0047ab, #002b80);
-  padding: 80px 20px;
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-}
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+      opacity: 0.08;
+      z-index: 0;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .benefits-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
 
-/* Title & Description */
-.section-title {
-  text-align: left;
-  font-size: 45px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 15px;
-}
+    .section-title {
+      text-align: center;
+      font-size: 39px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
 
-.section-description {
-  
-  max-width: 900px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #dce3f2;
-  margin: 0 auto 40px;
-}
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
 
-.benefits-heading {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  color: #ffcc00;
-  margin-bottom: 30px;
-}
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 40px 25px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
 
-/* Benefits Grid */
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
 
-/* Each Card */
-.benefit-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 35px 25px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-}
+    .benefit-icon img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+      filter: brightness(1.2);
+    }
 
-.benefit-card:hover {
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-  transform: translateY(-6px);
-}
+    .benefit-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
 
-/* Icon */
-.benefit-icon img {
-  width: 55px;
-  height: 55px;
-  margin-bottom: 20px;
-  filter: brightness(1.5) hue-rotate(180deg);
-}
+    .benefit-card p {
+      font-size: 15px;
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-/* Text Inside Cards */
-.benefit-card h4 {
-  font-size: 18px;
-  color: #ffcc00;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+    .benefit-btn {
+      background: linear-gradient(90deg, #007bff, #00d4ff);
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
-.benefit-card p {
-  font-size: 15px;
-  color: #e3e7f3;
-  line-height: 1.6;
-}
+    .benefit-btn:hover {
+      background: linear-gradient(90deg, #00d4ff, #007bff);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00d4ff;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title, .section-description, .benefits-heading {
-    text-align: center;
-  }
-}
+    .benefits-footer {
+      text-align: center;
+      margin-top: 80px;
+      color: #e0e0e0;
+    }
 
+    .benefits-footer h3 {
+      font-size: 26px;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
 
-.services-section {
-  background: linear-gradient(135deg, #002a77, #004aad);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.services-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: 0.3s ease-in-out;
-  text-align: center;
-}
-
-.service-card:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-5px);
-}
-
-.service-card img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  color: #ffcc00;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  color: #e5e5e5;
-  font-size: 0.95rem;
-  min-height: 50px;
-}
-
-.btn-learn {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: #00aaff;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn-learn:hover {
-  background-color: #0091e6;
-}
+    .benefits-footer p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
 
 
 
-/* ===========================
+
+    /* General Section */
+    .workers-section {
+      background: linear-gradient(180deg, #0047ab, #002b80);
+      padding: 80px 20px;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Title & Description */
+    .section-title {
+      text-align: left;
+      font-size: 45px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+
+      max-width: 900px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #dce3f2;
+      margin: 0 auto 40px;
+    }
+
+    .benefits-heading {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: #ffcc00;
+      margin-bottom: 30px;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    /* Each Card */
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 35px 25px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .benefit-card:hover {
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-6px);
+    }
+
+    /* Icon */
+    .benefit-icon img {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 20px;
+      filter: brightness(1.5) hue-rotate(180deg);
+    }
+
+    /* Text Inside Cards */
+    .benefit-card h4 {
+      font-size: 18px;
+      color: #ffcc00;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      font-size: 15px;
+      color: #e3e7f3;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+
+      .section-title,
+      .section-description,
+      .benefits-heading {
+        text-align: center;
+      }
+    }
+
+
+    .services-section {
+      background: linear-gradient(135deg, #002a77, #004aad);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .services-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .service-card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: #ffcc00;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #e5e5e5;
+      font-size: 0.95rem;
+      min-height: 50px;
+    }
+
+    .btn-learn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #00aaff;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-learn:hover {
+      background-color: #0091e6;
+    }
+
+
+
+    /* ===========================
    FOOTER DESIGN
 =========================== */
 
-.footer {
-  background: #001f3f;
-  color: #ffffff;
-  padding: 60px 20px 20px;
-  font-family: 'Poppins', sans-serif;
-}
+    .footer {
+      background: #001f3f;
+      color: #ffffff;
+      padding: 60px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* About Section */
-.footer-about h3 {
-  font-size: 22px;
-  color: #ffcc00;
-  margin-bottom: 15px;
-}
+    /* About Section */
+    .footer-about h3 {
+      font-size: 22px;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
 
-.footer-about p {
-  font-size: 15px;
-  color: #d6d6d6;
-  line-height: 1.6;
-}
+    .footer-about p {
+      font-size: 15px;
+      color: #d6d6d6;
+      line-height: 1.6;
+    }
 
-/* Quick Links */
-.footer-links h4,
-.footer-contact h4,
-.footer-social h4 {
-  color: #ffcc00;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
+    /* Quick Links */
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-social h4 {
+      color: #ffcc00;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.footer-links ul li {
-  margin-bottom: 8px;
-}
+    .footer-links ul li {
+      margin-bottom: 8px;
+    }
 
-.footer-links ul li a {
-  color: #d6d6d6;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+    .footer-links ul li a {
+      color: #d6d6d6;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-.footer-links ul li a:hover {
-  color: #ffffff;
-}
+    .footer-links ul li a:hover {
+      color: #ffffff;
+    }
 
-/* Contact Section */
-.footer-contact p {
-  color: #d6d6d6;
-  font-size: 15px;
-  line-height: 1.7;
-}
+    /* Contact Section */
+    .footer-contact p {
+      color: #d6d6d6;
+      font-size: 15px;
+      line-height: 1.7;
+    }
 
-/* Social Icons */
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
 
-.social-icons img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s, filter 0.3s;
-}
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s, filter 0.3s;
+    }
 
-.social-icons img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
+    .social-icons img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
 
-/* Footer Bottom */
-.footer-bottom {
-  text-align: center;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 30px;
-}
+    /* Footer Bottom */
+    .footer-bottom {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      margin-top: 30px;
+    }
 
-.footer-bottom p {
-  color: #c0c0c0;
-  font-size: 14px;
-}
+    .footer-bottom p {
+      color: #c0c0c0;
+      font-size: 14px;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    text-align: center;
-  }
-  .social-icons {
-    justify-content: center;
-  }
-}
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        text-align: center;
+      }
 
-
-
+      .social-icons {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
@@ -862,25 +882,26 @@ canvas {
 
   <!-- HEADER -->
   <header>
-  <div class="logo">
-    <img src="./public/logo.png" alt="KaamSet Logo" />
-    KaamSet
-  </div>
+    <div class="logo">git init
 
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <img src="./public/log.png" alt="KaamSet Logo" />
+      KaamSet
+    </div>
 
-  <nav id="navbar">
-    <a href="#hero">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#service">Services</a>
-    <a href="#download">Download</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navbar">
+      <a href="#hero">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#service">Services</a>
+      <a href="#about">about</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
 
   <!-- HERO SECTION -->
-  <section  id = "hero" class="hero">
+  <section id="hero" class="hero">
     <canvas id="bg"></canvas>
     <div class="overlay"></div>
 
@@ -893,21 +914,21 @@ canvas {
 
       <div class="phones">
 
-        <img class="front" src="./public/download (3).png" alt="FRONT Screen"></img>
+        <img class="front" src="./public/hero.png" alt="FRONT Screen"></img>
 
 
- 
-      
+
+
 
 
 
       </div>
 
-   
+
     </div>
   </section>
 
-<script>
+  <script>
     function toggleMenu() {
       const nav = document.getElementById("navbar");
       nav.classList.toggle("active");
@@ -990,113 +1011,115 @@ canvas {
       canvas.height = hero.offsetHeight;
     });
   </script>
- <section  id="about" class ="about-section">
-  <div class="about-container">
-    <h5 class="expertise">OUR EXPERTISE</h5>
-    <h2 class="about-title">ABOUT KaamSet</h2>
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <h5 class="expertise">OUR EXPERTISE</h5>
+      <h2 class="about-title">ABOUT KaamSet</h2>
 
-    <div class="about-box">
-      <div class="about-icon">
-      <div>
-        <img src="./public/download.png" alt="employer icon">
+      <div class="about-box">
+        <div class="about-icon">
+          <div>
+            <img src="./public/about.png" alt="employer icon">
+          </div>
+          <div class="about-text">
+            <h3>For Employers</h3>
+            <p>
+              KaamSet is solving a real problem in our community — the struggle to find reliable
+              and skilled daily workers. Whether its an electrician, maid, plumber, cook, or driver,
+              employers can now easily connect with verified workers through a simple mobile app.
+              Our platform empowers local workers and makes hiring faster, safer, and transparent.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="about-text">
-        <h3>For Employers</h3>
-        <p>
-          KaamSet is solving a real problem in our community — the struggle to find reliable
-          and skilled daily workers. Whether its an electrician, maid, plumber, cook, or driver,
-          employers can now easily connect with verified workers through a simple mobile app.
-          Our platform empowers local workers and makes hiring faster, safer, and transparent.
+  </section>
+
+  <section id="service" class="benefits-section">
+    <div class="benefits-container">
+      <h2 class="section-title">Our Key Features</h2>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Worker Icon">
+          </div>
+          <h3>Skilled Worker Network</h3>
+          <p>Connect instantly with verified skilled workers to get your job done efficiently and reliably.</p>
+          <button class="benefit-btn">Learn More</button>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png" alt="Flexibility Icon">
+          </div>
+          <h3>Flexible Hiring</h3>
+          <p>Hire workers for a day, week, or month — whatever suits your need best.</p>
+          <button class="benefit-btn">Learn More</button>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Reach Icon">
+          </div>
+          <h3>Nationwide Reach</h3>
+          <p>Find trusted workers not just in your city but from across the country.</p>
+          <button class="benefit-btn">Learn More</button>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Growth Icon">
+          </div>
+          <h3>Empowering Growth</h3>
+          <p>We help both employers and workers grow through fair and transparent connections.</p>
+          <button class="benefit-btn">Learn More</button>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png" alt="Support Icon">
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Our support team is always available to help you with any issue or question.</p>
+          <button class="benefit-btn">Learn More</button>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Security Icon">
+          </div>
+          <h3>Verified & Secure</h3>
+          <p>All workers and employers are verified to ensure a safe working experience.</p>
+          <button class="benefit-btn">Learn More</button>
+        </div>
+      </div>
+
+      <div class="benefits-footer">
+        <h3>Conclusion</h3>
+        <p>Our platform bridges the gap between people and opportunities, making the hiring process simple, safe, and
+          smart for everyone. Through KaamSet, both workers and employers can connect seamlessly in a trusted and
+          efficient environment.
         </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section  id ="service" class="benefits-section">
-  <div class="benefits-container">
-    <h2 class="section-title">Our Key Features</h2>
 
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Worker Icon">
-        </div>
-        <h3>Skilled Worker Network</h3>
-        <p>Connect instantly with verified skilled workers to get your job done efficiently and reliably.</p>
-        <button class="benefit-btn">Learn More</button>
-      </div>
 
-      <div class="benefit-card">
-        <div class="benefit-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png" alt="Flexibility Icon">
-        </div>
-        <h3>Flexible Hiring</h3>
-        <p>Hire workers for a day, week, or month — whatever suits your need best.</p>
-        <button class="benefit-btn">Learn More</button>
-      </div>
 
-      <div class="benefit-card">
-        <div class="benefit-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Reach Icon">
-        </div>
-        <h3>Nationwide Reach</h3>
-        <p>Find trusted workers not just in your city but from across the country.</p>
-        <button class="benefit-btn">Learn More</button>
-      </div>
+  <section class="workers-section">
+    <div class="container">
+      <div>
+        <h2 class="section-title">For Workers</h2>
 
-      <div class="benefit-card">
-        <div class="benefit-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Growth Icon">
-        </div>
-        <h3>Empowering Growth</h3>
-        <p>We help both employers and workers grow through fair and transparent connections.</p>
-        <button class="benefit-btn">Learn More</button>
-      </div>
 
-      <div class="benefit-card">
-        <div class="benefit-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png" alt="Support Icon">
-        </div>
-        <h3>24/7 Support</h3>
-        <p>Our support team is always available to help you with any issue or question.</p>
-        <button class="benefit-btn">Learn More</button>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Security Icon">
-        </div>
-        <h3>Verified & Secure</h3>
-        <p>All workers and employers are verified to ensure a safe working experience.</p>
-        <button class="benefit-btn">Learn More</button>
+        <p class="section-description">
+          KaamSet approach to creating a platform for blue-collar and pink-collar workers
+          addresses critical gaps in the job market by offering benefits workers:a streamlined registration process
+          that is accessible and free of charge. Here’s how KaamSet platform
+        </p>
       </div>
     </div>
-
-    <div class="benefits-footer">
-      <h3>Conclusion</h3>
-      <p>Our platform bridges the gap between people and opportunities, making the hiring process simple, safe, and smart for everyone. Through KaamSet, both workers and employers can connect seamlessly in a trusted and efficient environment.
-</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="workers-section">
-  <div class="container">
-  <div>
-    <h2 class="section-title">For Workers</h2>
-
-
-    <p class="section-description">
-      KaamSet approach to creating a platform for blue-collar and pink-collar workers
-      addresses critical gaps in the job market by offering benefits workers:a streamlined registration process
-      that is accessible and free of charge. Here’s how KaamSet platform 
-    </p>
-  </div>
-  </div>
 
     <h3 class="benefits-heading">Benefits:</h3>
 
@@ -1107,7 +1130,9 @@ canvas {
         </div>
         <h4>Easy Registration Process</h4>
         <p>
-          KaamSet simplifies the registration process, making it easy for workers — even those with limited formal education — to create profiles and effectively showcase their skills. This user-friendly approach ensures that every worker has an equal opportunity to participate in the job market and connect with potential employers.
+          KaamSet simplifies the registration process, making it easy for workers — even those with limited formal
+          education — to create profiles and effectively showcase their skills. This user-friendly approach ensures that
+          every worker has an equal opportunity to participate in the job market and connect with potential employers.
 
         </p>
       </div>
@@ -1118,7 +1143,9 @@ canvas {
         </div>
         <h4>Visibility to Employers</h4>
         <p>
-          By registering on KaamSet, workers gain exposure to a diverse range of companies across multiple sectors, significantly enhancing their chances of securing suitable and stable job opportunities that match their skills and experience.
+          By registering on KaamSet, workers gain exposure to a diverse range of companies across multiple sectors,
+          significantly enhancing their chances of securing suitable and stable job opportunities that match their
+          skills and experience.
 
         </p>
       </div>
@@ -1129,7 +1156,9 @@ canvas {
         </div>
         <h4>Supportive Environment</h4>
         <p>
-          Our platform offers dedicated guidance and support to help workers enhance their profiles and connect with reliable, verified employers. This ensures that every worker has the opportunity to present their skills effectively and build meaningful, long-term career connections through KaamSet.
+          Our platform offers dedicated guidance and support to help workers enhance their profiles and connect with
+          reliable, verified employers. This ensures that every worker has the opportunity to present their skills
+          effectively and build meaningful, long-term career connections through KaamSet.
 
         </p>
       </div>
@@ -1140,160 +1169,169 @@ canvas {
         </div>
         <h4>Completely Free</h4>
         <p>
-          The platform enables workers to register completely free of cost, eliminating financial barriers and ensuring accessibility for a broader audience. This inclusive approach allows individuals from all economic backgrounds to benefit from the opportunities provided by KaamSet, promoting equal access to employment and skill development across Pakistan.
+          The platform enables workers to register completely free of cost, eliminating financial barriers and ensuring
+          accessibility for a broader audience. This inclusive approach allows individuals from all economic backgrounds
+          to benefit from the opportunities provided by KaamSet, promoting equal access to employment and skill
+          development across Pakistan.
 
         </p>
       </div>
 
-      
+
     </div>
-     <div class="benefits-footer">
+    <div class="benefits-footer">
       <h3>Conclusion</h3>
-      <p>KaamSet initiative to bridge the gap between industries and skilled workers in Pakistan holds great potential for addressing critical workforce challenges. By offering a streamlined hiring process and a wide range of sector-specific profiles, KaamSet not only helps businesses maintain operational continuity but also contributes to economic resilience and growth across various sectors. 
+      <p>KaamSet initiative to bridge the gap between industries and skilled workers in Pakistan holds great potential
+        for addressing critical workforce challenges. By offering a streamlined hiring process and a wide range of
+        sector-specific profiles, KaamSet not only helps businesses maintain operational continuity but also contributes
+        to economic resilience and growth across various sectors.
 
-        Kaam Set platform effectively addresses the immediate needs of workers and companies in the Pakistani job market** while fostering a more equitable and efficient labor ecosystem. By providing a free, accessible registration platform and reducing lead times between contracts, KaamSet plays a vital role in connecting talent with opportunities, supporting economic development, and promoting social inclusion across Pakistan. </p>
-     </div>
-  </div>
-</section>
-
-
-<section class="services-section">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966489.png" alt="Plumber">
-      <h3>Plumber</h3>
-      <p>Expert plumbing repairs and installations for home or business.</p>
-      <a href="#" class="btn-learn">Learn More</a>
+        Kaam Set platform effectively addresses the immediate needs of workers and companies in the Pakistani job
+        market** while fostering a more equitable and efficient labor ecosystem. By providing a free, accessible
+        registration platform and reducing lead times between contracts, KaamSet plays a vital role in connecting talent
+        with opportunities, supporting economic development, and promoting social inclusion across Pakistan. </p>
     </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1769/1769041.png" alt="Electrician">
-      <h3>Electrician</h3>
-      <p>Certified professionals for all types of electrical work.</p>
-      <a href="#" class="btn-learn">Learn More</a>
     </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4370/4370879.png" alt="Painter">
-      <h3>Painter / House Painter</h3>
-      <p>Transform your walls with professional painting services.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2833/2833450.png" alt="AC Technician">
-      <h3>AC Technician</h3>
-      <p>Reliable air conditioning installation and repair services.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910901.png" alt="Refrigeration Technician">
-      <h3>Refrigeration Technician</h3>
-      <p>Keep your cooling systems in perfect condition.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3082/3082031.png" alt="Carpenter">
-      <h3>Carpenter / Woodworker</h3>
-      <p>Custom furniture and repair by skilled craftsmen.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Welder">
-      <h3>Welder / Metal Fabricator</h3>
-      <p>Strong, precise welding and metalwork solutions.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3211/3211348.png" alt="Gardener">
-      <h3>Gardener / Landscaper</h3>
-      <p>Beautiful garden design and maintenance services.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Housekeeper">
-      <h3>Housekeeper / Cleaner</h3>
-      <p>Keep your home spotless with trusted cleaning services.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Cook">
-      <h3>Cook / Chef</h3>
-      <p>Delicious home-cooked meals prepared by professionals.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Driver">
-      <h3>Driver / Chauffeur</h3>
-      <p>Professional and punctual driving services for all needs.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Security Guard">
-      <h3>Security Guard</h3>
-      <p>Reliable and trained guards to keep you safe.</p>
-      <a href="#" class="btn-learn">Learn More</a>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
-<footer class="footer">
-  <div class="footer-container">
-    
-    <div class="footer-about">
-      <h3>KaamSet</h3>
-      <p>
-        Empowering workforce acquisition through smart hiring and digital connection.
-        Hire smart. Work together. Simplify recruitment for everyone.
-      </p>
-    </div>
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
 
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#download">Download</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>Email: support@kaamset.com</p>
-      <p>Phone: +92 300 1234567</p>
-      <p>Karachi, Pakistan</p>
-    </div>
-
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#"><img src="./public/facebook icon.png" alt="Facebook"></a>
-        <a href="#"><img src="./public/insta icon.png" alt="Instagram"></a>
-        <a href="#"><img src="./public/yt.png" alt="YouTube"></a>
-        <a href="#"><img src="./public/linkedin icon.png" alt="Linkedin"></a>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966489.png" alt="Plumber">
+        <h3>Plumber</h3>
+        <p>Expert plumbing repairs and installations for home or business.</p>
+        <a href="#" class="btn-learn">Learn More</a>
       </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1769/1769041.png" alt="Electrician">
+        <h3>Electrician</h3>
+        <p>Certified professionals for all types of electrical work.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4370/4370879.png" alt="Painter">
+        <h3>Painter / House Painter</h3>
+        <p>Transform your walls with professional painting services.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2833/2833450.png" alt="AC Technician">
+        <h3>AC Technician</h3>
+        <p>Reliable air conditioning installation and repair services.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910901.png" alt="Refrigeration Technician">
+        <h3>Refrigeration Technician</h3>
+        <p>Keep your cooling systems in perfect condition.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3082/3082031.png" alt="Carpenter">
+        <h3>Carpenter / Woodworker</h3>
+        <p>Custom furniture and repair by skilled craftsmen.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Welder">
+        <h3>Welder / Metal Fabricator</h3>
+        <p>Strong, precise welding and metalwork solutions.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3211/3211348.png" alt="Gardener">
+        <h3>Gardener / Landscaper</h3>
+        <p>Beautiful garden design and maintenance services.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Housekeeper">
+        <h3>Housekeeper / Cleaner</h3>
+        <p>Keep your home spotless with trusted cleaning services.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Cook">
+        <h3>Cook / Chef</h3>
+        <p>Delicious home-cooked meals prepared by professionals.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Driver">
+        <h3>Driver / Chauffeur</h3>
+        <p>Professional and punctual driving services for all needs.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Security Guard">
+        <h3>Security Guard</h3>
+        <p>Reliable and trained guards to keep you safe.</p>
+        <a href="#" class="btn-learn">Learn More</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-about">
+        <h3>KaamSet</h3>
+        <p>
+          Empowering workforce acquisition through smart hiring and digital connection.
+          Hire smart. Work together. Simplify recruitment for everyone.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: support@kaamset.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Karachi, Pakistan</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="./public/fb.png" alt="Facebook"></a>
+          <a href="#"><img src="./public/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="./public/youtube.png" alt="YouTube"></a>
+          <a href="#"><img src="./public/linkedin.png" alt="Linkedin"></a>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 KaamSet. All Rights Reserved.</p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>© 2025 KaamSet. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 
 
